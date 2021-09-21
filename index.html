@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌎 My portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <div id="container">
+    <nav id="nav">
+      <div class="nav__container">
+        <div class="container__items">
+          <div class="items__left">
+            <a href="#">Johan Rodriguez</a>
+          </div>
+          <div class="items__right">
+            <ul>
+              <li><a href="#main">About me</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experiences">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#study">Studies</a></li>
+              <li><a href="#footer">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header id="main">
+      <div class="header__container">
+        <div class="container__content">
+          <div class="content__avatar">
+            <img src="./assets/images/avatar.png" />
+          </div>
+          <div class="content__bio">
+            <div class="bio__description">
+              <h1>Hi 👋, I'm Johan Rodriguez</h1>
+              <p>I'm a computer science student from Colombia passionate about software development, I
+                like to program in JavaScript and TypeScript, I am currently ready and prepared to work
+                or collaborate with developers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <article>
+      <section id="skills">
+        <div class="article__container">
+          <div class="item">
+            <h1>Skills</h1>
+            <div class="item__container">
+              <div class="item__container--left">
+                <button class="button item__container--tablinks"
+                  onclick="openSkill(event, 'languages')">Languages</button>
+                <button class="button item__container--tablinks"
+                  onclick="openSkill(event, 'frontend')">Front-End</button>
+                <button class="button item__container--tablinks" onclick="openSkill(event, 'backend')">Back-End</button>
+                <button class="button item__container--tablinks" onclick="openSkill(event, 'mobile')">Mobile
+                  development</button>
+                <button class="button item__container--tablinks"
+                  onclick="openSkill(event, 'database')">Database</button>
+                <button class="button item__container--tablinks" onclick="openSkill(event, 'tools')">Tools</button>
+                <select id="selectBox" name="select" class="button selectTool" onchange="changeFunc();">
+                  <option value="languages" selected>Languages</option>
+                  <option value="frontend">Front-End</option>
+                  <option value="backend">Back-End</option>
+                  <option value="mobile">Mobile development</option>
+                  <option value="database">Database</option>
+                  <option value="tools">Tools</option>
+                </select>
+              </div>
+              <div class="item__container--right">
+                <div id="languages" class="item__container--skill">
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>JavaScript</p>
+                      <p>52%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills js"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>TypeScript</p>
+                      <p>50%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills ts"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>PHP</p>
+                      <p>40%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills php"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="frontend" class="item__container--skill" style="display: none;">
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Angular</p>
+                      <p>40%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills angular"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Svelte</p>
+                      <p>50%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills svelte"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>HTML</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills html"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>CSS</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills css"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Sass</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills sass"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="backend" class="item__container--skill" style="display: none;">
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Express</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills express"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Nest</p>
+                      <p>50%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills nest"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>NodeJs</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills nodejs"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="mobile" class="item__container--skill" style="display: none;">
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>React native</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills reactnative"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="database" class="item__container--skill" style="display: none;">
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>MySQL</p>
+                      <p>40%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills mysql"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>MongoDB</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills mongodb"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="tools" class="item__container--skill" style="display: none;">
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Git</p>
+                      <p>50%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills git"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Github</p>
+                      <p>60%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills github"></div>
+                    </div>
+                  </div>
+                  <div class="item__skill">
+                    <div class="item__container--legend">
+                      <p>Gitlab</p>
+                      <p>40%</p>
+                    </div>
+                    <div class="item__container--number">
+                      <div class="skills gitlab"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="experiences">
+        <div class="article__container">
+          <div class="item">
+            <h1>Experience</h1>
+            <div class="experiences__container">
+              <button class="button experiences__container--accordion" onclick="openAccordion('experiences__block1')">
+                <div class="button_description">
+                  <p>Mobile Developer</p> &nbsp<span> Feb/2021 - Apr/2021</span>
+                </div>
+                <img src="./assets/icons/arrow_down.svg" />
+              </button>
+              <div id="experiences__block1" style="display:none;">
+                <div class="button experiences__detail">
+                  <p>Company name: Sistemas y Soluciones Integradas s.a.s.</p>
+                </div>
+                <div class="button experiences__detail">
+                  <p>Description: Develop a mobile application for home delivery of a restaurant.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="article__container">
+          <div class="item">
+            <h1>Projects</h1>
+            <div class="projects__container">
+              <h2>Made in a personal way</h2>
+              <div class="projects_itemcontainer">
+                <div class="projects__item">
+                  <h3><b>WeatherApp</b></h3>
+                  <p><b>Project information</b></p>
+                  <p><b>Category:</b> Mobile app</p>
+                  <p><b>Date:</b> August 10, 2020</p>
+                  <p><b>Stack:</b> JavaScript, Rest Api, React Native</p>
+                  <p class="projects__item--box"><b>Description:</b> This is a mobile application made
+                    in JavaScript with React Native where you can search and obtain information
+                    about the weather of a city.</p>
+                  <div class="projects__item--github">
+                    <a href="https://github.com/Johan-Rodriguez25-zz/weatherApp" target="__blank"><img
+                        src="./assets/icons/github.svg" /></a>
+                    <a href="https://github.com/Johan-Rodriguez25-zz/weatherApp" target="__blank">Repository link</a>
+                  </div>
+                </div>
+                <div class="projects__item">
+                  <h3><b>Personal portfolio</b></h3>
+                  <p><b>Project information</b></p>
+                  <p><b>Category:</b> Web page</p>
+                  <p><b>Date:</b> August 28, 2021</p>
+                  <p><b>Stack:</b> Html, Css y JavaScript</p>
+                  <p class="projects__item--box"><b>Description:</b> This project is my portfolio
+                    developed by me, where I specify who I am, my skills, experience, projects and
+                    studies.</p>
+                  <div class="projects__item--github">
+                    <a href="https://github.com/Johan-Rodriguez25/Johan-Rodriguez25.github.io" target="__blank"><img
+                        src="./assets/icons/github.svg" /></a>
+                    <a href="https://github.com/Johan-Rodriguez25/Johan-Rodriguez25.github.io" target="__blank">Repository link</a>
+                  </div>
+                </div>
+                <div class="projects__item">
+                  <h3><b>Notes App</b></h3>
+                  <p><b>Project information</b></p>
+                  <p><b>Category:</b> Web Application</p>
+                  <p><b>Date:</b> September 2, 2021</p>
+                  <p><b>Stack:</b> NestJs, TypeScript, NodeJs, Heroku</p>
+                  <p class="projects__item--box"><b>Description:</b> This is a web application made in
+                    TypeScript with Angular and Nestjs where you can create notes.</p>
+                  <div class="projects__item--github">
+                    <a href="https://github.com/Johan-Rodriguez25/notes-app-front" target="__blank"><img
+                        src="./assets/icons/github.svg" /></a>
+                    <a href="https://github.com/Johan-Rodriguez25/notes-app-front" target="__blank">Frontend repository
+                      link</a>
+                  </div>
+                  <div class="projects__item--github">
+                    <a href="https://github.com/Johan-Rodriguez25/notes-app-api" target="__blank"><img
+                        src="./assets/icons/github.svg" /></a>
+                    <a href="https://github.com/Johan-Rodriguez25/notes-app-api" target="__blank">Backend repository
+                      link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  </section>
+  <section id="study">
+    <div class="article__container">
+      <div class="item">
+        <h1>Studies</h1>
+        <div class="projects__container">
+          <h2>Education</h2>
+          <div class="projects_itemcontainer">
+            <div class="projects__item study__item">
+              <img src="./assets/icons/study.svg">
+              <div class="study__item--description">
+                <p>2020 - current</p>
+                <h3>Computer Science Student</h3>
+                <p>Moscow Institute of Physics and Technology</p>
+              </div>
+            </div>
+          </div>
+          <div class="projects_itemcontainer">
+            <div class="projects__item study__item">
+              <img src="./assets/icons/study.svg">
+              <div class="study__item--description">
+                <p>2019 - current</p>
+                <h3>Systems engineering student</h3>
+                <p>Universidad Piloto de Colombia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </article>
+  <footer id="footer">
+    <div class="footer__cotainer">
+      <div class="footer__top">
+        <div class="footer__contacto">
+          <p><b>Email: </b><br> jsrodriguezfajardo@gmail.com</p>
+          <p><b>Location: </b><br> Girardot, Colombia</p>
+        </div>
+        <div class="footer__imgs">
+          <a href="https://www.linkedin.com/in/jsrodriguezf/" target="__blank"><img
+              src="./assets/icons/linkedin.svg"></a>
+          <a href="https://twitter.com/Johan_Ro25" target="__blank"><img src="./assets/icons/twitter.svg"></a>
+          <a href="https://t.me/Johan-rodriguez25" target="__blank"><img src="./assets/icons/telegram.svg"></a>
+          <a href="https://github.com/Johan-Rodriguez25" target="__blank"><img src="./assets/icons/w_github.svg"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
